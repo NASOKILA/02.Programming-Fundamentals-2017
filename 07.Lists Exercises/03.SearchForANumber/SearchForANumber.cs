@@ -31,8 +31,6 @@ namespace _03.SearchForANumber
                 Console.WriteLine("YES!");
             else
                 Console.WriteLine("NO!");
-
-
         }
     }
 }

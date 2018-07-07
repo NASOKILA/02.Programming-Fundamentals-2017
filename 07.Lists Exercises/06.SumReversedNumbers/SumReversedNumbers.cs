@@ -9,7 +9,6 @@ namespace _06.SumReversedNumbers
     {
         static void Main(string[] args)
         {
-
             List<string> numbers = Console.ReadLine()
                 .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)                
                 .ToList();
@@ -17,6 +16,7 @@ namespace _06.SumReversedNumbers
             long sum = 0;
             
             string number = string.Empty;
+
             foreach (var item in numbers)
             {
                 for (int i = item.Length-1; i >= 0; i--)
@@ -26,8 +26,7 @@ namespace _06.SumReversedNumbers
                 sum += long.Parse(number);
                 number = string.Empty;
             }
-
-
+            
             Console.WriteLine(sum);
         }
     }

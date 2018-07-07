@@ -40,8 +40,6 @@ namespace _02.ChangeList
                 Console.WriteLine(string.Join(" ", numbers.Where(e => e%2 == 0)));
             else if(command[0] == "Odd")
                 Console.WriteLine(string.Join(" ", numbers.Where(e => e%2 == 1)));
-
-
         }
     }
 }

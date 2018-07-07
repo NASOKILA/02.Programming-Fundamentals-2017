@@ -9,7 +9,6 @@ namespace _7.ListsExercises
     class Program
     {
         static void Main(string[] args)
-        {
-        }
+        {}
     }
 }

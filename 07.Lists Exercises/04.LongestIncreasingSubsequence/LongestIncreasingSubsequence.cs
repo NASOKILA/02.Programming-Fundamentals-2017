@@ -35,15 +35,14 @@ namespace _04.LongestIncreasingSubsequence
                     bestLen = len;
                     bestStart = start;
                 }
-
             }
 
             for (int i = bestStart; i < bestStart + bestLen; i++)
             {
                 Console.Write(n[i] + " ");
             }
-            Console.WriteLine();
 
+            Console.WriteLine();
         }
     }
 }
