@@ -65,8 +65,6 @@ namespace _05.ClosestTwoPoints
                         pointXAndPointY.Add(allPoints[j]);
 
                         allDistances[distanceBetweenPoints] = pointXAndPointY;
-                         //allDistances.Clear();
-                         // allDistances.Clear();
                     }
                 }
 
@@ -74,7 +72,6 @@ namespace _05.ClosestTwoPoints
 
             
             shortestDistance = allDistances.Keys.Min();
-            // = allDistances.Where(k => k.Key == shortestDistance).ToList();
             List<Point> points = new List<Point>();
             foreach (var item in allDistances.Where(k => k.Key == shortestDistance))
             {

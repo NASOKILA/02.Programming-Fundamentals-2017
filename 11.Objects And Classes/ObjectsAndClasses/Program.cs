@@ -16,17 +16,12 @@ namespace ObjectsAndClasses
                 name = "Atanas",
                 year = 1992
             };
-
-            // operatora new suzdava neshto novo
-
+            
             Console.WriteLine(nasko);
-
-
+            
             var stringObject = new String('s', 3);
 
             Console.WriteLine(stringObject);
-            
-
         }
     }
 }

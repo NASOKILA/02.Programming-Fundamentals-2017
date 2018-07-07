@@ -13,12 +13,12 @@ namespace _06.RectanglePosition
 
         public double  Right()
         {   
-                return Left + Height; // Tova go pravim na metod     
+                return Left + Height; 
         }
 
         public double Bottom
         {
-            get  // a tova na ger metod
+            get
             {
                 return Top + Width;
             }
@@ -66,7 +66,7 @@ namespace _06.RectanglePosition
         {
             bool isInsade = false;
 
-            if (r1.Left >= r2.Left && r1.Right() <= r2.Right() // vikame right kato funkciq, narochno taka sme go napravili
+            if (r1.Left >= r2.Left && r1.Right() <= r2.Right() 
                 && r1.Top >= r2.Top && r1.Bottom <= r2.Bottom)
                 isInsade = true;
 

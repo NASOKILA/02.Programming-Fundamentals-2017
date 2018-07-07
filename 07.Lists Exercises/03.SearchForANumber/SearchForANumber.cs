@@ -20,7 +20,9 @@ namespace _03.SearchForANumber
                 .ToArray();
 
             int numOfElementsToTakeFromTheList = threeNumsArray[0];
+
             int numOfElementsToDeleteFromTheTakenNums = threeNumsArray[1];
+
             int searchedNumInTheListAfterManiulation = threeNumsArray[2];
 
             List<int> takenElements = numbers.Take(numOfElementsToTakeFromTheList).ToList();

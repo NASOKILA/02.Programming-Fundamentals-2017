@@ -15,18 +15,15 @@ namespace _02.RandomizeWords
             {
                 int pos2 = rnd.Next(words.Length);
 
-                // sega samo thrqbva da slapnem elementite
                 if (pos1 != pos2)
                 {
                     var old = words[pos1];
                     words[pos1] = words[pos2];
                     words[pos2] = old;
                 }
-
             }
 
             Console.WriteLine(string.Join("\r\n", words));
-
         }
     }
 }

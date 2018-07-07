@@ -10,7 +10,6 @@ namespace _07.SalesReport
         public string product { get; set; }
         public decimal price { get; set; }
         public decimal quantity { get; set; }
-        //Pishem prop i TAP i avtomatichno ni se pishe samo
     }
     class SalesReport
     {
