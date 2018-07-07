@@ -8,14 +8,13 @@ namespace _04.Files
 {
     class File
     {
-
         public string Root { get; set; }
         public decimal FileSize { get; set; }
         public string FileName { get; set; }
         public string Exstention { get; set; }
         public List<string> Folders { get; set; }
-
     }
+
     class Files
     {
         static void Main(string[] args)
@@ -23,6 +22,7 @@ namespace _04.Files
             int n = int.Parse(Console.ReadLine());
 
             List<File> allFies = new List<File>();
+
             for (int i = 0; i < n; i++)
             {
                 string[] command = Console.ReadLine()
@@ -31,7 +31,7 @@ namespace _04.Files
                 .ToArray();
 
                 string root = command[0];
-                decimal fileSize = decimal.Parse(command[command.Length-1]);
+                decimal fileSize = decimal.Parse(command[command.Length - 1]);
                 string[] fileNameAndExtention = command[command.Length - 2].Split('.').ToArray();
                 if (fileNameAndExtention.Length != 2)
                     continue;
@@ -45,23 +45,23 @@ namespace _04.Files
 
                     allFies.Remove(file2);
                 }
-               
-                    File file = new File
-                    {
-                        Root = root,
-                        FileSize = fileSize,
-                        FileName = fileName,
-                        Exstention = exstention,
-                        Folders = folders
-                    };
 
-                    allFies.Add(file);
-                
-                
+                File file = new File
+                {
+                    Root = root,
+                    FileSize = fileSize,
+                    FileName = fileName,
+                    Exstention = exstention,
+                    Folders = folders
+                };
+
+                allFies.Add(file);
+
+
 
             }
 
-             string[] query = Console.ReadLine().Split(' ').ToArray();
+            string[] query = Console.ReadLine().Split(' ').ToArray();
             string exstentionToSearch = query[0];
             string rootToSearch = query[2];
 
@@ -76,9 +76,8 @@ namespace _04.Files
                 Console.WriteLine($"{file.FileName}.{file.Exstention} - {file.FileSize} KB");
             }
 
-            if(result.Count == 0)
+            if (result.Count == 0)
                 Console.WriteLine($"No");
-
         }
     }
 }

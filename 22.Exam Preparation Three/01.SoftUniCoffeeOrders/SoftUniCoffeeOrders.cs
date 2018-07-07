@@ -9,7 +9,9 @@ namespace _01.SoftUniCoffeeOrders
         static void Main(string[] args)
         {
             int countOfOrders = int.Parse(Console.ReadLine());
+
             decimal totalPrice = 0;
+
             for (int i = 0; i < countOfOrders; i++)
             {
                 decimal pricePerCapsule = decimal.Parse(Console.ReadLine());
@@ -20,8 +22,8 @@ namespace _01.SoftUniCoffeeOrders
                 decimal price = (((decimal)daysInMonth * capsulesCount )* pricePerCapsule);
                 Console.WriteLine($"The price for the coffee is: ${price:F2}");
                 totalPrice += price;
-
             }
+
             Console.WriteLine($"Total: ${totalPrice:F2}");
         }
     }

@@ -19,8 +19,7 @@
                     .ToArray();
 
                 while (true)
-                {
-
+                { 
                     if (command[0] == "reverse")
                         Reverse(array, command);
                     else if (command[0] == "sort")
@@ -29,8 +28,7 @@
                         array = RollLeft(array, command);
                     else if (command[0] == "rollRight")
                         array = RollRight(array, command);
-
-
+                    
                     command = Console.ReadLine()
                    .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                    .Select(a => a.Trim())
@@ -38,8 +36,6 @@
                 }
 
                 Console.WriteLine($"[{string.Join(", ", array)}]");
-
-
             }
 
             private static string[] RollLeft(string[] arr, string[] command)
@@ -112,8 +108,6 @@
             {
                 try
                 {
-
-
                     int start = int.Parse(command[2]);
                     int count = int.Parse(command[4]);
 
@@ -126,8 +120,8 @@
                         Console.WriteLine("Invalid input parameters.");
                         return;
                     }
-                    Array.Sort(array, start, count);
 
+                    Array.Sort(array, start, count);
                 }
                 catch
                 {
@@ -161,5 +155,4 @@
                 }
             }
         }
-
     }
