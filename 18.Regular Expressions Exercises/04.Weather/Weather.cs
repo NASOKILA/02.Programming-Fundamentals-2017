@@ -11,19 +11,21 @@ namespace _04.Weather
     {
         static void Main(string[] args)
         {
-
             string input = Console.ReadLine();
+
             string patt = @"(?<city>[A-Z]{2})(?<temperature>\d+\.\d+)(?<weather>[A-Za-z]+)\|";
+
             Regex reg = new Regex(patt);
 
             var citiesAndTemps = new Dictionary<string, double>();
+
             var citiesAndWeathers = new Dictionary<string, string>();
 
 
             while (input != "end")
             {
-
                 var match = reg.Match(input);
+
                 if (match.Success)
                 {
                     string nameOfCity = match.Groups["city"].ToString();
@@ -46,8 +48,6 @@ namespace _04.Weather
                 var weather = citiesAndWeathers.Where(k => k.Key == city).Select(d => d.Value).ToArray();
                 Console.WriteLine($"{city} => {temperature:F2} => {weather[0]}");
             }
-
-
         }
     }
 }

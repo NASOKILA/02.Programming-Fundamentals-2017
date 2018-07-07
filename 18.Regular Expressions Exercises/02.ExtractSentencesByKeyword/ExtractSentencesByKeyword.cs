@@ -11,22 +11,17 @@ namespace _02.ExtractSentencesByKeyword
     {
         static void Main(string[] args)
         {
-
             string word = Console.ReadLine();
 
             string[] input = Console.ReadLine()
                 .Split(new char[] {'.','!','?'}, StringSplitOptions.RemoveEmptyEntries)
                 .ToArray();
-
-           
-
+            
             for (int i = 0; i < input.Length; i++)
             {
                 if(input[i].Contains($" {word}"))
-                    Console.WriteLine(input[i]);     
-                
+                    Console.WriteLine(input[i]);         
             }
-
         }
     }
 }

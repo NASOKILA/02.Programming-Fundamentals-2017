@@ -16,9 +16,11 @@ namespace _06.ValidUsernames
                 .ToArray();
 
             string pattern = @"\b[a-zA-z]{1}([\w\d_]{2,24})\b";
+
             Regex regex = new Regex(pattern);
 
             List<string> validNames = new List<string>();
+
             List<int> sums = new List<int>();
 
             GetValidNames(validNames, names, regex);
@@ -45,6 +47,7 @@ namespace _06.ValidUsernames
                 int sum = validNames[i].Length + validNames[i + 1].Length;
                 sums.Add(sum);
             }
+
             return sums.Max();
         }
 
@@ -57,10 +60,8 @@ namespace _06.ValidUsernames
                     Console.WriteLine(validNames[i]);
                     Console.WriteLine(validNames[i+1]);
                     break;
-                }
-                
+                }    
             }
-
         }
     }
 }

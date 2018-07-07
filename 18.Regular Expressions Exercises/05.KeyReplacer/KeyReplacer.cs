@@ -9,7 +9,9 @@ namespace _05.KeyReplacer
         static void Main(string[] args)
         {
             string keysInput = Console.ReadLine();
+
             string startKey = string.Empty;
+
             string endKey = string.Empty;
 
             for (int i = 0; i < keysInput.Length; i++)
@@ -19,8 +21,9 @@ namespace _05.KeyReplacer
                 else
                     break;
             }
+            
+            keysInput = new string(keysInput.ToCharArray().Reverse().ToArray());
 
-             keysInput = new string(keysInput.ToCharArray().Reverse().ToArray());
             for (int i = 0; i < keysInput.Length; i++)
             {
                 if (keysInput[i] != '|' && keysInput[i] != '<' && keysInput[i] != '\\')
@@ -32,6 +35,7 @@ namespace _05.KeyReplacer
             endKey = new string(endKey.ToCharArray().Reverse().ToArray());
 
             string text = Console.ReadLine();
+
             string result = string.Empty;
 
             while (true)
@@ -51,7 +55,6 @@ namespace _05.KeyReplacer
                 Console.WriteLine("Empty result");
             else
                 Console.WriteLine(result);
-
         }
     }
 }

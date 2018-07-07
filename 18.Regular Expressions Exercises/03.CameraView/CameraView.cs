@@ -15,6 +15,7 @@ namespace _03.CameraView
                 .Split(' ').Select(int.Parse).ToArray();
 
             int elementsToSkip = input[0];
+
             int elementsToTake = input[1];
 
             string cameras = Console.ReadLine();
@@ -28,8 +29,7 @@ namespace _03.CameraView
             List<string> results = new List<string>();
 
             foreach (var item in matches)
-            {
-                
+            {    
                 char[] resultElements = item
                     .ToString()
                     .ToCharArray()
@@ -38,8 +38,8 @@ namespace _03.CameraView
                     .ToArray();
 
                 string result = new string(resultElements);
-                results.Add(result);
-                             
+
+                results.Add(result);                
             }
 
             Console.WriteLine(string.Join(", ", results));

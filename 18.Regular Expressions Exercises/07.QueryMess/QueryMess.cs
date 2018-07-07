@@ -55,9 +55,7 @@ namespace _07.QueryMess
 
                 PrintPairs(keysAndValues);
                 input = Console.ReadLine().Trim();
-            } 
-
-
+            }
         }
 
         private static void PrintPairs(Dictionary<string, string> keysAndValues)
@@ -68,6 +66,7 @@ namespace _07.QueryMess
                 string value = pair.Value;
                 Console.Write($"{key}=[{value}]");
             }
+
             Console.WriteLine();
         }
     }
