@@ -35,10 +35,9 @@ namespace _07.Hideout
                     }
 
                     Console.WriteLine($"Hideout found at index {startIndex} and it is with size {size}!");
+
                     break;
                 }
-
-
             }
         }
     }

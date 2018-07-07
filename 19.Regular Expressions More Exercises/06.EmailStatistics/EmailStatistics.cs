@@ -18,7 +18,6 @@ namespace _06.EmailStatistics
             SetDomainsAndUsernames(domainsAndUsernames, n);      
 
             PrintResult(domainsAndUsernames);
-
         }
 
         private static void SetDomainsAndUsernames(Dictionary<string, List<string>> domainsAndUsernames, int n)
@@ -38,10 +37,9 @@ namespace _06.EmailStatistics
                     continue;
 
                 string domain = match.Groups["Domain"].ToString();
+
                 string username = match.Groups["username"].ToString();
-
-
-
+                
                 if (!domainsAndUsernames.ContainsKey(domain))
                 {
                     usernames.Add(username);
@@ -52,7 +50,6 @@ namespace _06.EmailStatistics
                     usernames = domainsAndUsernames[domain];
                     if (!domainsAndUsernames[domain].Contains(username)) // ako ne sudurja username go dobavi
                         usernames.Add(username); // ako ne go ignorirame
-
                 }
             }
         }

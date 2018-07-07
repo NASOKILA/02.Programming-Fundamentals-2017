@@ -19,20 +19,14 @@ namespace _08.Mines
             {
                 char[] chars = match.Groups[1].ToString().ToCharArray();
                 int power = Math.Abs(chars[0] - chars[1]);
-
-                // replace the bomb with _
+                
                 int length = match.ToString().Length;
                 int startIndex = input.IndexOf(match.ToString());
                 int endIndex = startIndex + length;
 
                 for (int i = startIndex; i < endIndex; i++)
                     input = input.Remove(i, 1).Insert(i, "_");
-
-
-                // replace the bomb blast with _ Use startIndex and EndIndex
-
-                // blast left
-
+                
                 for (int i = startIndex - 1; i > startIndex - power - 1; i--)
                 {
                     if (i < 0)
@@ -40,8 +34,7 @@ namespace _08.Mines
 
                     input = input.Remove(i, 1).Insert(i, "_");
                 }
-                // blast right
-
+                
                 for (int i = endIndex; i < endIndex + power; i++)
                 {
                     if (i >= input.Length)
@@ -49,7 +42,6 @@ namespace _08.Mines
 
                     input = input.Remove(i, 1).Insert(i, "_");
                 }
-
             }
 
             Console.WriteLine(input);

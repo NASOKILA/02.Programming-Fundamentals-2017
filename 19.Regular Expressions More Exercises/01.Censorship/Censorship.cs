@@ -12,11 +12,14 @@ namespace _01.Censorship
         static void Main(string[] args)
         {
             string word = Console.ReadLine();
-            string sentence = Console.ReadLine();
-            string replacement = new string('*', word.Length);
-            var result = Regex.Replace(sentence,word, replacement);
-            Console.WriteLine(result);
 
+            string sentence = Console.ReadLine();
+
+            string replacement = new string('*', word.Length);
+
+            var result = Regex.Replace(sentence,word, replacement);
+
+            Console.WriteLine(result);
         }
     }
 }

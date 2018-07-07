@@ -15,6 +15,7 @@ namespace _04.MorseCodeUpgraded
                 .ToArray();
 
             int total = 0;
+
             for (int i = 0; i < codes.Length; i++)
             {
                 string code = codes[i];
@@ -33,10 +34,7 @@ namespace _04.MorseCodeUpgraded
                 }
 
                 Console.Write((char)total);
-
             }
-
-
         }
 
         private static int CountSequences(string code, int total)
@@ -64,7 +62,6 @@ namespace _04.MorseCodeUpgraded
 
         private static bool ContainsConsecutive(string code)
         {
-            
             for (int j = 0; j < code.Length - 1; j++)
             {
                 if (code[j] == code[j + 1])

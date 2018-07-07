@@ -28,8 +28,6 @@ namespace _02.EmailMe
                 Console.WriteLine("Call her!");
             else
                 Console.WriteLine("She is not the one.");
-            
-
         }
     }
 }

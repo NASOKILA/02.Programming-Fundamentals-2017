@@ -11,7 +11,9 @@ namespace _03.KarateStrings
         static void Main(string[] args)
          {
             string path = Console.ReadLine();
+
             int power = 0;
+
             for (int i = 0; i < path.Length; i++)
             {
                 if (path[i] == '>')
@@ -31,8 +33,7 @@ namespace _03.KarateStrings
                     i--;
                 }
             }
-
-
+            
             Console.WriteLine(path);
         }
     }
