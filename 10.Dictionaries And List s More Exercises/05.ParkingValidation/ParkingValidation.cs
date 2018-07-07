@@ -28,6 +28,7 @@ namespace _05.ParkingValidation
 
         private static void Unregister(List<string> inputArr, Dictionary<string, string> namesAndPlates)
         {
+
             if (inputArr[0] == "unregister")
             {
                 string command = inputArr[0];
