@@ -4,3 +4,6 @@ C:\Users\nasko\Desktop\CsharpArrayAndMethodsMoreExersices\CsharpArrayAndMethodsM
 C:\Users\nasko\Desktop\CsharpArrayAndMethodsMoreExersices\CsharpArrayAndMethodsMoreExersices\obj\Debug\CsharpArrayAndMethodsMoreExersices.csprojResolveAssemblyReference.cache
 C:\Users\nasko\Desktop\CsharpArrayAndMethodsMoreExersices\CsharpArrayAndMethodsMoreExersices\obj\Debug\CsharpArrayAndMethodsMoreExersices.exe
 C:\Users\nasko\Desktop\CsharpArrayAndMethodsMoreExersices\CsharpArrayAndMethodsMoreExersices\obj\Debug\CsharpArrayAndMethodsMoreExersices.pdb
+C:\Users\user\Desktop\fundamentals Cleaning Comments\02.Programming-Fundamentals-2017\05.C# Array And Methods More Exercises\CsharpArrayAndMethodsMoreExersices\bin\Debug\CsharpArrayAndMethodsMoreExersices.exe.config
+C:\Users\user\Desktop\fundamentals Cleaning Comments\02.Programming-Fundamentals-2017\05.C# Array And Methods More Exercises\CsharpArrayAndMethodsMoreExersices\obj\Debug\CsharpArrayAndMethodsMoreExersices.exe
+C:\Users\user\Desktop\fundamentals Cleaning Comments\02.Programming-Fundamentals-2017\05.C# Array And Methods More Exercises\CsharpArrayAndMethodsMoreExersices\obj\Debug\CsharpArrayAndMethodsMoreExersices.pdb

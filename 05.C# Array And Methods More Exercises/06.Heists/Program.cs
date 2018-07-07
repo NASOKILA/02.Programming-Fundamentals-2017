@@ -15,6 +15,7 @@ namespace _06.Heists
                 .Select(int.Parse).ToArray();
 
             int jewelsPrice = priceOfJewelsAndGold[0];
+
             int goldPrice = priceOfJewelsAndGold[1];
 
             string[] command = Console.ReadLine()
@@ -22,6 +23,7 @@ namespace _06.Heists
                 .ToArray();
 
             int totalEarnings = 0;
+
             int totalExpences = 0;
 
             while (command[0] != "Jail" && command[1] != "Time")
@@ -41,17 +43,20 @@ namespace _06.Heists
                 }
 
                 int jewelsEarnings = countOfJewels * jewelsPrice;
+
                 int goldEarnings = countOfGold * goldPrice;
+
                 int earnings = jewelsEarnings + goldEarnings;
+
                 totalEarnings += earnings;
-
-
+                
                 command = Console.ReadLine()
                 .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .ToArray();
             }
 
             int moneyEarned = 0;
+
             int moneyLost = 0;
 
             if (totalEarnings >= totalExpences)

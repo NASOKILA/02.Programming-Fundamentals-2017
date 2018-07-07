@@ -9,7 +9,6 @@ namespace _05.Pizza_Ingredients
     {
         static void Main(string[] args)
         {
-
             string[] ingredients = Console.ReadLine()
                 .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .ToArray();
@@ -33,10 +32,10 @@ namespace _05.Pizza_Ingredients
                     counter--;
                     break;
                 }
-
             }
 
             Console.WriteLine($"Made pizza with total of {counter} ingredients.");
+
             Console.WriteLine("The ingredients are: " + string.Join(", ", validIngredients.Where(e => e != null)) + ".");
         }
     }

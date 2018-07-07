@@ -24,15 +24,10 @@ namespace _02.Manipulate_Array
                 else if (command[0] == "Distinct")
                     input = input.Distinct().ToArray();
                 else if (command[0] == "Replace" && command.Length == 3)
-                {
-
                     input[int.Parse(command[1])] = command[2];
-                } 
             }
 
             Console.WriteLine(string.Join(", ", input));
-
-
         }
     }
 }

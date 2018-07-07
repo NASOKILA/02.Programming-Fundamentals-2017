@@ -19,15 +19,8 @@ namespace _09.Jump_Around
             int collectedCells = 0;
             
             int index = Array.IndexOf(array, array[0]);
+
             int numOfIndex = int.MinValue;
-
-
-                
-
-            
-
-           // Console.WriteLine(collectedCells);
-
         }
     }
 }

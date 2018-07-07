@@ -25,18 +25,21 @@ namespace _07.Inventory_Matcher
                 .ToArray();
 
             string command = Console.ReadLine();
+
             while (command != "done")
             {
                 int index = Array.IndexOf(namesOfProducts, command);
+
                 string name = namesOfProducts[index];
+
                 decimal price = pricesOfProducts[index];
+
                 long quantity = quantitiesOfProducts[index];
 
                 Console.WriteLine($"{name} costs: {price}; Available quantity: {quantity}");
 
                 command = Console.ReadLine();
             }
-
         }
     }
 }

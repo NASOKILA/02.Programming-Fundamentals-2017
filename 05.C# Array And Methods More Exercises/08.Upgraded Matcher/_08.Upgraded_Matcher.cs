@@ -23,9 +23,9 @@ namespace _08.Upgraded_Matcher
                 .ToArray();
 
             string[] command = Console.ReadLine().Split(' ').ToArray();
+
             while (command[0] != "done")
             {
-
                 int index = Array.IndexOf(namesOfProducts, command[0]);
 
                 string name = namesOfProducts[index];

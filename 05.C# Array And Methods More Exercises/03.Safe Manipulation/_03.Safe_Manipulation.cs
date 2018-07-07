@@ -40,7 +40,6 @@ namespace _03.Safe_Manipulation
             }
 
             Console.WriteLine(string.Join(", ",input));
-
         }
     }
 }
