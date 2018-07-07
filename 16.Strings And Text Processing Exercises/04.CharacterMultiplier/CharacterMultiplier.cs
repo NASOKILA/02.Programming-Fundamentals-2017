@@ -12,8 +12,8 @@ namespace _04.CharacterMultiplier
             string[] input = Console.ReadLine().Split(' ').ToArray();
 
             string str1 = input[0];
-            string str2 = input[1];
 
+            string str2 = input[1];
 
             int result =  Multiplier(str1, str2);
 
@@ -22,9 +22,9 @@ namespace _04.CharacterMultiplier
 
         private static int Multiplier(string str1, string str2)
         {
-            // sum characters of first and then second and then multiply them
 
             string longerStr = string.Empty;
+
             string shorterStr = string.Empty;
 
             int totalSum = 0;
@@ -48,8 +48,7 @@ namespace _04.CharacterMultiplier
             {
                 longerStr = longerStr.Remove(0, shorterStr.Length);
                 foreach (var ch in longerStr)
-                    totalSum += (int)ch;
-                
+                    totalSum += (int)ch;   
             }
 
             return totalSum;

@@ -7,8 +7,6 @@ namespace _07.MultiplyBigNumber
     class MultiplyBigNumber
     {
         static void Main(string[] args)
-        {
-
-        }
+        {}
     }
 }

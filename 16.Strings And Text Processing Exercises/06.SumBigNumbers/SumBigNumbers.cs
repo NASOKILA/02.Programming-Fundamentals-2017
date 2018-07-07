@@ -12,11 +12,11 @@ public class SumBigNumbers
         string secondNumber = Console.ReadLine().TrimStart(new char[] { '0' });
 
         if (firstNumber.Length > secondNumber.Length)
-        {// we add zeroes to the left 
+        {
             secondNumber = secondNumber.PadLeft(firstNumber.Length, '0');
         }
         else
-        { // we add zeroes to the left 
+        {
             firstNumber = firstNumber.PadLeft(secondNumber.Length, '0');
         }
 

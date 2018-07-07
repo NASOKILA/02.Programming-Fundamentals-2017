@@ -30,10 +30,10 @@ namespace MagicExchangeableWords
             for (int i = 0; i < shorter.Length; i++)
             {
                 if (!map.ContainsKey(firstWord[i]))
-                {//ako ne sudurja takuv kluch
+                {
                     if (!map.ContainsValue(secondWord[i]))
-                    {// ako ne sudurja takova value
-                        map[firstWord[i]] = secondWord[i]; // gi dobavi
+                    {
+                        map[firstWord[i]] = secondWord[i]; 
                     }
                     else
                     {

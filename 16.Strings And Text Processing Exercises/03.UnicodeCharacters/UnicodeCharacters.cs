@@ -11,13 +11,12 @@ namespace _03.UnicodeCharacters
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
+
             foreach (var letter in input)
             {
                 var utf = "u" + ((int)letter).ToString("X4").ToLower();
                 Console.Write("\\" + utf);
-
             }
-
         }
     }
 }

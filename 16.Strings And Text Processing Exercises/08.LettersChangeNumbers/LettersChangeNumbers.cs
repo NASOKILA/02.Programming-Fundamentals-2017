@@ -10,17 +10,14 @@ namespace _08.LettersChangeNumbers
     {
         static void Main(string[] args)
         {
-
             string[] input = Console.ReadLine()
                 .Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries)
                 .ToArray();
-
-
+            
             decimal totalSum = 0;
             
             for (int i = 0; i < input.Length; i++)
             {
-               
                 string currentInput = input[i];
 
                 char firstLetter = input[i].First();
@@ -37,22 +34,16 @@ namespace _08.LettersChangeNumbers
                     number /= positionToFirstLetter;
                 else
                     number *= positionToFirstLetter;
-
-
+                
                 if (char.IsUpper(lastLetter))
                     number -= positionToSecondLetter;
                 else
                     number += positionToSecondLetter;
-
-
+                
                 totalSum += number;
             }
-
-
+            
             Console.WriteLine($"{totalSum:F2}");
-
         }
-
-       
     }
 }
