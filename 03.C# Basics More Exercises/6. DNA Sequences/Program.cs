@@ -50,6 +50,7 @@ namespace _6.DNA_Sequences
                         Console.Write($"{matched}{sequence}{matched} ");
                         sequence = string.Empty;
                     }
+
                     Console.WriteLine();
                 }
             }

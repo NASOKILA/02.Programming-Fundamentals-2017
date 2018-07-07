@@ -77,12 +77,14 @@ namespace _2.Vapor_Store
                             break;
                         }
                 }
+
                 if (balance <= 0) {
                     Console.WriteLine("Out of money!");
                     break;
                 }
                 command = Console.ReadLine();
             }
+
             if (balance > 0)
             {
                 double totalSpent = balanceCopy - balance;

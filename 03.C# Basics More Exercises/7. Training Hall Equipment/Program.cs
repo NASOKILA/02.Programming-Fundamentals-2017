@@ -36,7 +36,6 @@ namespace _7.Training_Hall_Equipment
                 Console.WriteLine($"Money left: ${budjet-subtotal:F2}");
             else
                 Console.WriteLine($"Not enough. We need ${subtotal - budjet:F2} more.");
-
         }
     }
 }

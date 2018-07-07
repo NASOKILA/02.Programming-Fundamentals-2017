@@ -56,6 +56,7 @@ namespace _8.SMS_Typing
                     case 0: letter = ' '; break;
 
                 }
+
                 word += letter;
             }
 

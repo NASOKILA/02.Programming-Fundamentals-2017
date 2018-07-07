@@ -46,7 +46,6 @@ namespace _4.Photo_Gallery
                 Console.WriteLine($"Size: {photoSizeInMb / 1000000.0}MB");    
 
             Console.WriteLine($"Resolution: {photoWidthResolutionInPixels}x{photoHeigthResolutionInPixels} ({orientation})");
-
         }
     }
 }

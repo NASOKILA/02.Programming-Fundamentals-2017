@@ -9,8 +9,6 @@ namespace CsharpBasics_MoreExercises
     class Program
     {
         static void Main(string[] args)
-        {
-
-        }
+        {}
     }
 }

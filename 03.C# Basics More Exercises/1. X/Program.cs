@@ -12,9 +12,8 @@ namespace _1.X
         {
             int n = int.Parse(Console.ReadLine());
 
-            int counter = n - 2; // 3
-
-            // top part
+            int counter = n - 2; 
+            
             for (int i = 0; i < (n-1)/2; i++)
             {
                 Console.Write(new string(' ', i));
@@ -26,11 +25,10 @@ namespace _1.X
 
             Console.Write(new string(' ', (n - 1) / 2));
             Console.WriteLine("x");
-
-
+            
             int counter2 = ((n - 1) / 2) - 1;
             int counter3 = 1;
-            // bottom part
+
             for (int i = 0; i < (n - 1) / 2; i++)
             {
                 Console.Write(new string(' ', counter2));
@@ -40,7 +38,6 @@ namespace _1.X
                 counter2--;
                 counter3 += 2;
             }
-
         }
     }
 }

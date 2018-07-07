@@ -19,8 +19,7 @@ namespace _5.BPM_Counter
             int minutes = (int)seconds / 60;
             seconds = seconds - minutes * 60;
           
-            Console.WriteLine($"- {minutes}m {Math.Floor(seconds)}s");
-      
+            Console.WriteLine($"- {minutes}m {Math.Floor(seconds)}s"); 
         }
     }
 }
