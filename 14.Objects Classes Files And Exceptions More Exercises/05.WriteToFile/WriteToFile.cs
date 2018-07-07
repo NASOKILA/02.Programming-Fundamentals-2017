@@ -12,19 +12,13 @@ namespace _05.WriteToFile
 
             var text = File.ReadAllText("../../Sample_text.txt");
 
-         
-
-           // char[] punctuations = { '.', ',', '!', '?', ':' };
-
             string result = string.Empty;
 
-           
-                foreach (var letter in text)
-                {
-                    if (letter != '.' && letter != ',' && letter != '!' && letter != '?' && letter != ':')
-                        result += letter;
-                }
-                  
+            foreach (var letter in text)
+            {
+                if (letter != '.' && letter != ',' && letter != '!' && letter != '?' && letter != ':')
+                    result += letter;
+            }
 
             File.WriteAllText("../../output.txt", result);
         }

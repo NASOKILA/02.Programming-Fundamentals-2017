@@ -19,8 +19,8 @@ namespace _04.PunctuationFinder
             }
 
             result = result.Substring(0, result.Length-1);
-            File.WriteAllText("output.txt", result);
 
+            File.WriteAllText("output.txt", result);
         }
     }
 }

@@ -15,9 +15,11 @@ namespace _07.PlayCatch
             while (true)
             {
                 string[] command = Console.ReadLine().Split(' ').ToArray();
+
                 if (command[0] == "Replace")
                 {
                     int indexOne = int.Parse(command[1]);
+
                     int indexTwo = int.Parse(command[2]);
 
                     try
@@ -86,7 +88,6 @@ namespace _07.PlayCatch
                     if (countOfExceptions == 3)
                         break;
                 }
-                
             }
 
             Console.WriteLine(string.Join(", ", nums));

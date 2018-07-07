@@ -23,8 +23,11 @@ namespace _02.VehicleCatalogue
             List<Vehicle> vehicles = new List<Vehicle>();
 
             int carsTotalHorsePower = 0;
+
             int trucksTotalHorsePower = 0;
+
             int carsCount = 0;
+
             int trucksCount = 0;
 
             while (command[0] != "End")
@@ -39,7 +42,9 @@ namespace _02.VehicleCatalogue
                     type = command[0];
 
                 string model = command[1];
+
                 string color = command[2];
+
                 int horsePower = int.Parse(command[3]);
 
                 Vehicle vehicle = new Vehicle()
@@ -71,6 +76,7 @@ namespace _02.VehicleCatalogue
 
 
             string modelRecived = Console.ReadLine();
+
             while (modelRecived != "Close the Catalogue")
             {
                 Vehicle vehicle = vehicles.Where(v => v.Model == modelRecived).FirstOrDefault();
@@ -78,12 +84,12 @@ namespace _02.VehicleCatalogue
                 Console.WriteLine($"Model: {vehicle.Model}");
                 Console.WriteLine($"Color: {vehicle.Color}");
                 Console.WriteLine($"Horsepower: {vehicle.HorsePower}");
-
-
+                
                 modelRecived = Console.ReadLine();
             }
 
             double carsAverageHorsePower = (double)carsTotalHorsePower / carsCount;
+
             double trucksAverageHorsePower = (double)trucksTotalHorsePower / trucksCount;
 
             if (carsCount == 0)
@@ -92,6 +98,7 @@ namespace _02.VehicleCatalogue
                 trucksAverageHorsePower = 0;
 
             Console.WriteLine($"Cars have average horsepower of: {carsAverageHorsePower:F2}.");
+
             Console.WriteLine($"Trucks have average horsepower of: {trucksAverageHorsePower:F2}.");
         }
     }

@@ -173,7 +173,6 @@ namespace _03.Jarvis
             Console.WriteLine($"###Energy consumption: {secondLeg.EnergyConsumption}");
             Console.WriteLine($"###Strength: {secondLeg.Strength}");
             Console.WriteLine($"###Speed: {secondLeg.Speed}");
-
         }
     }
 }

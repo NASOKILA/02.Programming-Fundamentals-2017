@@ -7,12 +7,10 @@ namespace _08.PersonalException
 {
     class PersonalException
     {
-        class NegativeNumberException : Exception // nasledqvame klasa Excption
+        class NegativeNumberException : Exception 
         {
-            // pishem si konstruktora i si slagame message vutre v base 
             public NegativeNumberException(): base("My first exception is awesome!!!")
             {}
-
         }
 
         static void Main(string[] args)
@@ -22,11 +20,11 @@ namespace _08.PersonalException
                 try
                 {
                     int input = int.Parse(Console.ReadLine());
+
                     if (input < 0)
                         throw new NegativeNumberException();
                     else
                         Console.WriteLine(input);
-
                 }
                 catch (NegativeNumberException a)
                 {
@@ -34,7 +32,6 @@ namespace _08.PersonalException
                     break;
                 }
             }
-
         }
     }
 }
