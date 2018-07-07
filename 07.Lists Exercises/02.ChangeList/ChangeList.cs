@@ -13,8 +13,7 @@ namespace _02.ChangeList
                 .Split(' ')
                 .Select(int.Parse)
                 .ToList();
-
-
+            
             string[] command = Console.ReadLine().Split(' ').ToArray();
 
             while (command[0] != "Even" && command[0] != "Odd")
