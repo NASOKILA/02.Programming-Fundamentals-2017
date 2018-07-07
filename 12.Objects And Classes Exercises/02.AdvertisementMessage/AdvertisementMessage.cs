@@ -10,7 +10,6 @@ namespace _02.AdvertisementMessage
     {
         static void Main(string[] args)
         {
-
             int n = int.Parse(Console.ReadLine());
 
             string[] phases = {
@@ -54,8 +53,6 @@ namespace _02.AdvertisementMessage
             {
                 Console.WriteLine($"{phases[rnd.Next(0, phases.Length-1)]} {events[rnd.Next(0, events.Length-1)]} {authors[rnd.Next(0, authors.Length-1)]} {cities[rnd.Next(0, cities.Length-1)]}");
             }
-
-
         }
     }
 }

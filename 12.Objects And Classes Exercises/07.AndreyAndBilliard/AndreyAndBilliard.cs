@@ -8,8 +8,6 @@ namespace _07.AndreyAndBilliard
     {
         static void Main(string[] args)
         {
-            
-
             Dictionary<string, decimal> productAndPrice = new Dictionary<string, decimal>();
 
             Dictionary<string, Dictionary<string, int>> nameProductAndQuantity = new Dictionary<string, Dictionary<string, int>>();
@@ -21,7 +19,6 @@ namespace _07.AndreyAndBilliard
             SetOrders(productAndPrice, productAndQuantity, nameProductAndQuantity);
             
             PrintResult(productAndPrice,nameProductAndQuantity);
-
         }
 
         private static void SetOrders(Dictionary<string, decimal> productAndPrice, Dictionary<string, int> productAndQuantity, Dictionary<string, Dictionary<string, int>> nameProductAndQuantity)
@@ -41,7 +38,7 @@ namespace _07.AndreyAndBilliard
 
                 if (productAndPrice.ContainsKey(productToBuy))
                 {
-                    if (!nameProductAndQuantity.ContainsKey(name)) // ako ne sudurja tova ime
+                    if (!nameProductAndQuantity.ContainsKey(name)) 
                     {
                         productAndQuantity = new Dictionary<string, int>();
                         productAndQuantity[productToBuy] = quantity;
@@ -96,6 +93,7 @@ namespace _07.AndreyAndBilliard
                     totalBill += bill;
                 }
             }
+
             Console.WriteLine($"Total bill: {totalBill:f2}");
         }
     }

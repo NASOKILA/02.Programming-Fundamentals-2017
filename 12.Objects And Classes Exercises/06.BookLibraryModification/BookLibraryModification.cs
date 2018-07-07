@@ -75,7 +75,6 @@ namespace _06.BookLibraryModification
 
                 MyLibrary.BookList.Add(Mybook);
             }
-
         }
     }
 }

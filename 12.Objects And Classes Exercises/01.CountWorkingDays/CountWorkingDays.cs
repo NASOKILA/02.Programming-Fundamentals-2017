@@ -28,7 +28,7 @@ namespace _01.CountWorkingDays
                 CultureInfo.InvariantCulture
                 );
 
-            DateTime[] holidays = new DateTime[] { // year, month, day
+            DateTime[] holidays = new DateTime[] {
 
                 new DateTime(endDate.Year,01,01),
                 new DateTime(endDate.Year,03,03),
@@ -41,12 +41,11 @@ namespace _01.CountWorkingDays
                 new DateTime(endDate.Year,12,24),
                 new DateTime(endDate.Year,12,25),
                 new DateTime(endDate.Year,12,26),
-
             };
-
 
             
             int workingDays = 0;
+
             for (DateTime currentDay = startDate; currentDay <= endDate; currentDay = currentDay.AddDays(1))
             {              
                 if (!holidays.Any(d => d.Day == currentDay.Day && d.Month == currentDay.Month) 

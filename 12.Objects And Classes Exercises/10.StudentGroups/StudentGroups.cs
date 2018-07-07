@@ -10,45 +10,38 @@ namespace _10.StudentGroups
     class Town
     {
         public string Name { get; set; }
-        public List<Student> Students{ get; set; }
-        public int SeatsCount { get; set; }
-        //public Dictionary<string, Dictionary<string, DateTime>> StudentEmailAndDate{ get; set; }
-    }
-
-    class Group
-    {
-        public Town Town { get; set; }
-        public List<Student> Students{ get; set; }
-    }
-
-    class Student
-    {
-        public string Name{ get; set; }
-        public string Email { get; set; }
-        public DateTime RegistrationDate { get; set; }
-    }
-
-    class StudentGroups
-    {
-        static void Main(string[] args)
+        public List<Student> Students { get; set; }
+        public int SeatsCount
         {
-
-           
-
+            get; set;
         }
 
-        private List<Town> ReadTownsAndStudents()
+        class Group
         {
-            var towns = new List<Town>();
+            public Town Town { get; set; }
+            public List<Student> Students { get; set; }
+        }
 
-            // read Towns and stidents 
+        class Student
+        {
+            public string Name { get; set; }
+            public string Email { get; set; }
+            public DateTime RegistrationDate { get; set; }
+        }
 
-            string[] input = Console.ReadLine().Split(new string[] { "\r\n","\n"}, StringSplitOptions.None).ToArray();
+        class StudentGroups
+        {
+            static void Main(string[] args)
+            { }
 
+            private List<Town> ReadTownsAndStudents()
+            {
+                var towns = new List<Town>();
 
+                string[] input = Console.ReadLine().Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None).ToArray();
 
-
-            return towns;
+                return towns;
+            }
         }
     }
 }

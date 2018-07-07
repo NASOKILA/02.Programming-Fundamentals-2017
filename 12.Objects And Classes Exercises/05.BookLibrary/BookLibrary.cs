@@ -25,7 +25,6 @@ namespace _05.BookLibrary
     {
         static void Main(string[] args)
         {
-
             Library MyLibrary = new Library() {
                 Name = "NasosLibrary",
                 BookList = new List<Book>()
@@ -42,7 +41,6 @@ namespace _05.BookLibrary
 
         private static void SetBooks(Library myLibrary, Dictionary<string, double> nameAndSum)
         {
-
             var orderedBookList = myLibrary.BookList.OrderBy(a => a.Price).ThenByDescending(a => a.Author);
 
             foreach (var book in orderedBookList)
@@ -51,12 +49,10 @@ namespace _05.BookLibrary
                 nameAndSum[book.Author] = sumByAuthor;
 
             }
-
         }
 
         private static void SetLibrary(Library myLibrary)
         {
-
             int n = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < n; i++)
@@ -77,7 +73,6 @@ namespace _05.BookLibrary
                 };
 
                 myLibrary.BookList.Add(Mybook);
-
             }
         }
 

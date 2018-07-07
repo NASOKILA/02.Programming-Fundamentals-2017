@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace _09.TeamworkProjects
 {
-
     class Team
     {
         public string Name { get; set; }
@@ -16,12 +15,10 @@ namespace _09.TeamworkProjects
         public string LeaderNme { get; set; }
     }
 
-
     class TeamworkProjects
     {
         static void Main(string[] args)
-        {
-           
+        {           
             List<Team> teams = new List<Team>();
 
             Dictionary<string, string> leadersAndTeams = new Dictionary<string, string>();
@@ -31,14 +28,14 @@ namespace _09.TeamworkProjects
             SetAssignments(leadersAndTeams, teams);
 
             PrintResult(teams, leadersAndTeams);
-
         }
 
         private static void PrintResult(List<Team> teams, Dictionary<string, string> leadersAndTeams)
         {
-           
             teams = teams.Where(t => t.Members.Count > 0).ToList();
+
             teams = teams.OrderByDescending(t => t.Members.Count).ThenBy(t => t.Name).ToList();
+
             foreach (var team in teams)
             {
                 if (team.Members.Count > 0)
@@ -67,12 +64,10 @@ namespace _09.TeamworkProjects
 
         private static void SetAssignments(Dictionary<string, string> leadersAndTeams, List<Team> teams)
         {
-
             string[] assignment = Console.ReadLine()
                 .Split(new char[] { '-', '>' }, StringSplitOptions.RemoveEmptyEntries)
                 .ToArray();
-
-
+            
             while (assignment[0].Split(' ').First() != "end")
             {
                 string name = assignment[0];
@@ -80,19 +75,18 @@ namespace _09.TeamworkProjects
 
                 if (!leadersAndTeams.ContainsValue(joiningTeam))
                     Console.WriteLine($"Team {joiningTeam} does not exist!");
-                else if (teams.Any(t => t.Members.Contains(name) || t.LeaderNme == name)) // ako ima drug team sus sushtiq user v nego
+                else if (teams.Any(t => t.Members.Contains(name) || t.LeaderNme == name)) 
                     Console.WriteLine($"Member {name} cannot join team {joiningTeam}!");
                 else
                 {
                     Team currentTeam = teams.Where(t => t.Name == joiningTeam).FirstOrDefault();
-                    currentTeam.Members.Add(name);    // member added
+                    currentTeam.Members.Add(name);    
                 }
 
                 assignment = Console.ReadLine()
                 .Split(new char[] { '-', '>' }, StringSplitOptions.RemoveEmptyEntries)
                 .ToArray();
             }
-
         }
 
         private static void SetLeadersAndTeams(List<Team> teams, Dictionary<string, string> leadersAndTeams)
@@ -106,6 +100,7 @@ namespace _09.TeamworkProjects
                 string teamName = userAndTeam[1];
 
                 List<string> members = new List<string>();
+
                 Team newteam = new Team()
                 {
                     LeaderNme = leader,
