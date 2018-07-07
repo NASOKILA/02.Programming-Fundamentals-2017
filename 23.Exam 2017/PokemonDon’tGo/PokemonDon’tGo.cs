@@ -28,8 +28,7 @@ namespace PokemonDon_tGo
                     numbers.Insert(0, last);
 
                     sumOfAllRemovedElements += value;
-
-
+                    
                     for (int i = 0; i < numbers.Count; i++)
                     {
                         if (numbers[i] <= value)
@@ -39,8 +38,6 @@ namespace PokemonDon_tGo
                         else
                             numbers[i] = numbers[i] - value;
                     }
-
-
                 }
                 else if (index > numbers.Count - 1)
                 {
@@ -49,12 +46,9 @@ namespace PokemonDon_tGo
                     int value = last;
                     numbers.RemoveAt(numbers.Count - 1);
                     numbers.Add(first);
-
-
-
+                    
                     sumOfAllRemovedElements += value;
                     
-
                     for (int i = 0; i < numbers.Count; i++)
                     {
                         if (numbers[i] <= value)
@@ -64,9 +58,6 @@ namespace PokemonDon_tGo
                         else
                             numbers[i] = numbers[i] - value;
                     }
-
-
-
                 }
                 else
                 {
@@ -84,7 +75,6 @@ namespace PokemonDon_tGo
                         else
                             numbers[i] = numbers[i] - value;
                     }
-                    
                 }
                 
                 if (numbers.Count == 0)
@@ -94,7 +84,6 @@ namespace PokemonDon_tGo
             }
 
             Console.WriteLine(sumOfAllRemovedElements);
-
         }
     }
 }

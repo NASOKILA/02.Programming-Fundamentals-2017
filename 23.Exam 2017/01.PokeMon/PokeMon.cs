@@ -10,22 +10,22 @@ namespace _01.PokeMon
     {
         static void Main(string[] args)
         {
-
-
             var n = ulong.Parse(Console.ReadLine()); // m
+
             var m = ulong.Parse(Console.ReadLine()); // n
+
             var y = ulong.Parse(Console.ReadLine());
 
             var powerCopy = n;
 
             var targetCounter = 0;
+
             decimal halfPower = (n / (decimal)2.00);
 
             while (powerCopy >= m)
             {
                 if (powerCopy == halfPower)
                 {
-
                     if (y != 0 && powerCopy != 0)
                     {
                         powerCopy /= y;
@@ -42,6 +42,7 @@ namespace _01.PokeMon
             }
 
             Console.WriteLine($"{powerCopy}");
+
             Console.WriteLine($"{targetCounter}");
         }
     }

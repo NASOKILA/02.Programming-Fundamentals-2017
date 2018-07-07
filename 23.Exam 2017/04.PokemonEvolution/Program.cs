@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace _04.PokemonEvolution
 {
-
     class Pokemon
     {
         public string Name { get; set; }
@@ -26,8 +25,7 @@ namespace _04.PokemonEvolution
             Dictionary<string, List<string>> NameAndEvolution = new Dictionary<string, List<string>>();
             Dictionary<string, List<ulong>> NameAndIndexes = new Dictionary<string, List<ulong>>();
             Dictionary<string, string> NamesAndEvolutionPlusIndexToStr = new Dictionary<string, string>();
-
-
+            
             List<Pokemon> pokemons = new List<Pokemon>();
 
             while (input[0] != "wubbalubbadubdub")
@@ -46,8 +44,6 @@ namespace _04.PokemonEvolution
                     };
 
                     pokemons.Add(pokemon);
-
-
                 }
                 else if (input.Length == 1)
                 {
@@ -70,20 +66,16 @@ namespace _04.PokemonEvolution
                             }
                         }
                     }
-
                 }
-
-
-
-
+                
                 input = Console.ReadLine()
                 .Split(new char[] { ' ', '-', '>' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(a => a.Trim())
                 .ToArray();
-
             }
 
             List<string> printedPokemons = new List<string>();
+
             foreach (var pokemon in pokemons.Distinct())
             {
                 if (!printedPokemons.Contains(pokemon.Name))
@@ -98,10 +90,6 @@ namespace _04.PokemonEvolution
                     printedPokemons.Add(pokemon.Name);
                 }
             }  
-
-        }
-
-      
-        }
-   
+        }    
+    }
 }

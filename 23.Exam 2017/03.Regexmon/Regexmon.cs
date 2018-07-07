@@ -11,29 +11,23 @@ namespace _03.Regexmon
     {
         static void Main(string[] args)
         {
-            //^\b[a-zA-Z]+\-[a-zA-Z]+\b    didimon
-
             int counter = 0;
+
             string input = Console.ReadLine();
 
             while (true)
             {
-               // string didimonPattern = @"^[^a-zA-Z\-]+";
-              //  string bojomonPattern = @"^\b[a-zA-Z]+\-[a-zA-Z]+\b";
-               // Regex bojoregex = new Regex(bojomonPattern);
-              //  Regex didiRegex= new Regex(bojomonPattern);
-
                 if(counter % 2 == 0)
                 {
-
                     MatchCollection didiMatches = Regex.Matches(input
                   , @"[^a-zA-Z-]+");
 
                     foreach (var match in didiMatches)
                     {
-
                         string partToRemove = match.ToString();
+
                         char firstElem = partToRemove.First();
+
                         int lastIndex = 0;
 
                         while (true)
@@ -46,7 +40,6 @@ namespace _03.Regexmon
 
                        
                         Console.WriteLine(partToRemove);
-                        //int indexOfElementToRemove = input.IndexOf(partToRemove);
                         input = input.Remove(0, partToRemove.Length);
                         break;
                     }
@@ -55,16 +48,9 @@ namespace _03.Regexmon
                         break;
                     counter++;
                 }
-
-
-
-
-
-
-
+                
                 if (counter % 2 == 1)
                 {
-
                     MatchCollection bojoMatches = Regex.Matches(input
                     , @"\b[a-zA-Z]+\-[a-zA-Z]+\b"
                     , RegexOptions.Multiline);
@@ -85,7 +71,6 @@ namespace _03.Regexmon
                         }
 
                         Console.WriteLine(partToRemove);
-                        //int indexOfElementToRemove = input.IndexOf(partToRemove);
                         input = input.Remove(0, partToRemove.Length);
                         break;
                     }
@@ -93,16 +78,8 @@ namespace _03.Regexmon
                     if (bojoMatches.Count == 0)
                         break;
                     counter++;
-
-
                 }
-
-
-
-
-
             }
-
         }
     }
 }
