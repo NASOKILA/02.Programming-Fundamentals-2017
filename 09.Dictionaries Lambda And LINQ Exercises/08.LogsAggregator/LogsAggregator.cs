@@ -27,10 +27,8 @@ namespace _08.LogsAggregator
 
                     if (!namesIpsDurations[name].ContainsKey(ip))
                         namesIpsDurations[name][ip] = 0;   
-                    //setnahme na tova ime nov rechnik sus ip-to i duration  = na 0
                
                 namesIpsDurations[name][ip] += duration; 
-                // dobavihme vuv imeto nov rechnik sus ip-to i do nego duration !!!
             }
 
             foreach (var userIpDuration in namesIpsDurations)

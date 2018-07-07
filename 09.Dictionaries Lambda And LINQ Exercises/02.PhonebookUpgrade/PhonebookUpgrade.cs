@@ -14,7 +14,6 @@ namespace _02.PhonebookUpgrade
 
             while (input[0] != "END")
             {
-
                 if (input[0].Equals("A"))
                 {
                     string name = input[1];

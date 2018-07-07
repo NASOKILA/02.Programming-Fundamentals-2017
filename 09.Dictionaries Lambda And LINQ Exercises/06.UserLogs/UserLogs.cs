@@ -63,7 +63,5 @@ namespace _06.UserLogs
                 .ToList();
             }
         }
-
-
     }
 }

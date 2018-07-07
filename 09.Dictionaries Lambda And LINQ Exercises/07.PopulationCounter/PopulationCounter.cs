@@ -17,14 +17,12 @@ namespace _07.PopulationCounter
             Dictionary<string, long> cityPolulation = new Dictionary<string, long>();
 
             Dictionary<string, long> countryTotalPopulation = new Dictionary<string, long>();
-
-
+            
             SetCountryCityAndPopulation(input,countryCityPolulation, cityPolulation);
           
             SetCountryPopulation(countryCityPolulation, countryTotalPopulation);
 
-            OrderAndPrint(countryTotalPopulation, countryCityPolulation);
-            
+            OrderAndPrint(countryTotalPopulation, countryCityPolulation);   
         }
 
         private static void SetCountryCityAndPopulation(List<string> input

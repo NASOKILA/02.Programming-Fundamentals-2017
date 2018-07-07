@@ -30,15 +30,15 @@ namespace _10.SrubskoUnleashed
 
                 string singer = inputArr[0];
 
-                if (singer.Last() != ' ')// ako go nqmame tova znachi e nevaliden inputa 
+                if (singer.Last() != ' ')
                     input = Console.ReadLine();
                 else
                 {
-                    singer = singer.Trim(); // we have the singer
+                    singer = singer.Trim();
 
                     List<string> remainingInfo = inputArr[1].Split(' ').ToList();
 
-                    if (remainingInfo.Count < 3) // skipvame i drugiq nevaliden input
+                    if (remainingInfo.Count < 3) 
                         input = Console.ReadLine();
                     else
                     {
@@ -57,21 +57,19 @@ namespace _10.SrubskoUnleashed
 
                         if (!arenaSingersAndTotalPrices.ContainsKey(arena))
                             singersAndTotalPrices = new Dictionary<string, long>();
-                        else // ako arenata e razlichna prosto refreshvame  singersAndTotalPrices
+                        else 
                             singersAndTotalPrices = arenaSingersAndTotalPrices[arena];
 
 
 
                         if (!singersAndTotalPrices.ContainsKey(singer))
                             singersAndTotalPrices[singer] = totalMoney;
-                        else// ako nqma takuv pevec go slagame a ako ima prostosubirame cenata sus starata
+                        else
                             singersAndTotalPrices[singer] += totalMoney;
 
-                        // podrejdame si spisuka po cenata ot po golqmo kum po malko
                         singersAndTotalPrices = singersAndTotalPrices.OrderByDescending(pair => pair.Value)
                         .ToDictionary(pair => pair.Key, pair => pair.Value);
 
-                        // dobavqme vsichko kum glavniq rechnik
                         arenaSingersAndTotalPrices[arena] = singersAndTotalPrices;
 
                         input = Console.ReadLine();
@@ -91,6 +89,5 @@ namespace _10.SrubskoUnleashed
                 }
             }
         }
-
     }
 }

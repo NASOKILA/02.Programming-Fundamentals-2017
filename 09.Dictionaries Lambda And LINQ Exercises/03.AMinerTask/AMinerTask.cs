@@ -39,7 +39,6 @@ namespace _03.AMinerTask
 
             foreach (var resourseQuantity in resoursesQuantities)
             {
-                // IZVEJDAI GI V PROMENLIVI ZA DA E PO QSNO !!!
                 var resourse = resourseQuantity.Key;
                 var quantity = resourseQuantity.Value;
                 Console.WriteLine($"{resourse} -> {quantity}");

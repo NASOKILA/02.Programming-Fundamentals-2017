@@ -24,7 +24,6 @@ namespace _04.FixEmails
                 prevCommand = command;
                 counter++;
                 command = Console.ReadLine();
-
             }
 
             foreach (var nameEmail in namesAndEmails.Where(kvp => !kvp.Value.EndsWith("us") || !kvp.Value.EndsWith("us"))
@@ -35,7 +34,6 @@ namespace _04.FixEmails
 
                 Console.WriteLine($"{name} -> {email}");
             }
-
         }
     }
 }

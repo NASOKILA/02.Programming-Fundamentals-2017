@@ -15,10 +15,8 @@ namespace _09.LegendaryFarming
                 .ToList();
 
             Dictionary<string, int> keyMaterials = new Dictionary<string, int>();
+
             SortedDictionary<string, int> junk = new SortedDictionary<string, int>();
-
-            // 250 key materials winds the race
-
 
             string legendaryItem = string.Empty;
 
@@ -65,10 +63,10 @@ namespace _09.LegendaryFarming
                             break;
                     }
                     
-                    if (!keyMaterials.ContainsKey(resourse)) // ako ne sudurja tozi kluch samo go sloji
+                    if (!keyMaterials.ContainsKey(resourse))
                         keyMaterials[resourse] = quantity;
                     else
-                    {               //ako veche go sudurja tozi kluch dobavi kum sumata
+                    {               
                         if(legendaryItem != string.Empty)
                             keyMaterials[resourse] = quantity;
                         else
@@ -77,12 +75,11 @@ namespace _09.LegendaryFarming
                 }
                 else
                 {
-                    if (!junk.ContainsKey(resourse)) // ako ne sudurja tozi kluch samo go sloji
+                    if (!junk.ContainsKey(resourse))
                         junk[resourse] = quantity;
-                    else                                 //ako veche go sudurja tozi kluch dobavi kum sumata
+                    else                            
                         junk[resourse] += quantity;
                 }
-                
             }
 
 
@@ -98,13 +95,11 @@ namespace _09.LegendaryFarming
             foreach (var kvp in keyMaterials.OrderByDescending(x => x.Value))
             {
                 Console.WriteLine($"{kvp.Key}: {kvp.Value}");
-
             }
             foreach (var kvp in junk.OrderBy(x => x.Key))
             {
                 Console.WriteLine($"{kvp.Key}: {kvp.Value}");
             }
-
         }
     }
 }

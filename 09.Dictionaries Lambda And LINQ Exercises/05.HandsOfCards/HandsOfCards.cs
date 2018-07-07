@@ -47,10 +47,7 @@ namespace _05.HandsOfCards
                     .Select(a => a.Trim())
                     .Distinct()
                     .ToList();
-
-
-
-
+                
                 foreach (var card in cardsAndSuits)
                 {
                     if (!nameAndListOfCards.ContainsKey(name))
@@ -115,8 +112,6 @@ namespace _05.HandsOfCards
                         totalSum += (card * 1);
                         break;
                 }
-
-
             }
 
             return totalSum;

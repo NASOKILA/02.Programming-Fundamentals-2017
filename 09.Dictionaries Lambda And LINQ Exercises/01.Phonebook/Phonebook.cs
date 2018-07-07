@@ -16,7 +16,6 @@ namespace _01.Phonebook
             
             while (input[0] != "END")
             {
-
                 if (input[0].Equals("A"))
                 {
                     string name = input[1];
@@ -36,7 +35,6 @@ namespace _01.Phonebook
 
                 input = Console.ReadLine().Split(' ').ToList();
             }
-            
         }
     }
 }
