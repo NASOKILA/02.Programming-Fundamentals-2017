@@ -16,6 +16,6 @@ namespace _04.MergeFiles
             List<string> result = linesOne.Concat(linesTwo).ToList();
 
             File.WriteAllLines("output.txt", result);
-         }
+        }
     }
 }

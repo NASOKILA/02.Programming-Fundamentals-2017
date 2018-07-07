@@ -17,7 +17,6 @@ namespace _02.LineNumbers
                 .Select((l, i) => $"{i+1}.  " + l).ToArray();
 
             File.WriteAllLines("output.txt", resultLines);
-            //Stava i s for cikul
         }
     }
 }

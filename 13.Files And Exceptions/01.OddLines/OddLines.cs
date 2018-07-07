@@ -11,7 +11,6 @@ namespace _01.OddLines
     {
         static void Main(string[] args)
         {
-
             string[] lines = File.ReadAllLines("input.txt");
 
             List<string> oddLines = new List<string>();
@@ -23,12 +22,6 @@ namespace _01.OddLines
             }
                 
             File.WriteAllLines("output.txt", oddLines);
-            
-            // I S TOVA LIN1 STAVA
-           // List<string> oddLines2 = lines.Where((line,index) => index % 2 == 1).ToList();
-            
-
-
         }
     }
 }

@@ -37,8 +37,6 @@ namespace _03.WordCount
                         if (w.ToLower() == word)
                             wordThreeCount++;
                     }
-
-
                 }
             }
 
@@ -48,7 +46,6 @@ namespace _03.WordCount
             result.Add($"{words[2]} - {wordThreeCount}");
 
             File.WriteAllLines("output.txt", result);
-
         }
     }
 }
