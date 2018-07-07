@@ -24,15 +24,13 @@ namespace _05.Weather_Forecast
                     weather = "Cloudy";
                 else if (predictionNumber >= long.MinValue && predictionNumber <= long.MaxValue)
                     weather = "Windy";
-
-
+                
                 Console.WriteLine(weather);
             }
             catch
             {
                 Console.WriteLine("Rainy");
             }
-
         }
     }
 }

@@ -11,16 +11,15 @@ namespace _12.Beer_Kegs
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-
             
             string model = string.Empty; 
 
             string biggestKeg = string.Empty;
+
             double prevVolume = 0;
 
             for (int i = 0; i < n; i++)
-            {
-              
+            {  
                 model = Console.ReadLine();
                 double radius = double.Parse(Console.ReadLine());
                 long height = long.Parse(Console.ReadLine());

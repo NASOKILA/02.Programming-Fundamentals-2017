@@ -41,8 +41,8 @@ namespace _01.Type_Boundaries
             }
 
             Console.WriteLine(max);
-            Console.WriteLine(min);
 
+            Console.WriteLine(min);
         }
     }
 }

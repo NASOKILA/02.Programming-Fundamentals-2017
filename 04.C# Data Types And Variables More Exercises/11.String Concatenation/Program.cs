@@ -12,12 +12,15 @@ namespace _11.String_Concatenation
         {
 
             char delimeter = char.Parse(Console.ReadLine());
+
             string oddOrEven = Console.ReadLine();
+
             int numberOfLines = int.Parse(Console.ReadLine());
+
             string stringToUse = string.Empty;
+
             List<string> listOfStrings = new List<string>();
-            
-            
+                        
             for (int i = 1; i <= numberOfLines; i++)
             {
 
@@ -39,11 +42,9 @@ namespace _11.String_Concatenation
                 }
 
             }
-
             
-
-
             string result = string.Empty;
+
             foreach (var item in listOfStrings)
             {
 
@@ -52,6 +53,7 @@ namespace _11.String_Concatenation
             }
 
             result = result.Remove(result.Length-1);
+
             Console.WriteLine(result);
         }
     }

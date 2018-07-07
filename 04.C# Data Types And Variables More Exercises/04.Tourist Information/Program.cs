@@ -11,8 +11,11 @@ namespace _04.Tourist_Information
         static void Main(string[] args)
         {
             string imperialUnit = Console.ReadLine();
+
             double valueToConvert = double.Parse(Console.ReadLine());
+
             string convertedUnit = string.Empty;
+
             double result = 0;
 
             switch(imperialUnit)

@@ -13,8 +13,10 @@ namespace _02.Number_Checker
             string input = Console.ReadLine();
 
             long n;
+
             bool result = long.TryParse(input, out n);
-            if(result)
+
+            if (result)
                 Console.WriteLine("integer");
             else
                 Console.WriteLine("floating-point");

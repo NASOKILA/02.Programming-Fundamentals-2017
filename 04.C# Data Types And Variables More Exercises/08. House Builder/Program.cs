@@ -27,7 +27,6 @@ namespace _08.House_Builder
             }
 
             Console.WriteLine(sbytePrice + intPrice);
-
         }
     }
 }

@@ -10,10 +10,10 @@ namespace _07.Sentence_the_Thief
     {
         static void Main(string[] args)
         {
-
             string typeOfId = Console.ReadLine();
 
             long maxValue = 0L;
+
             switch (typeOfId)
             {
                 case "sbyte":
@@ -26,12 +26,11 @@ namespace _07.Sentence_the_Thief
                     maxValue = long.MaxValue;
                     break;
             }
-
-
+            
             int countOfIds = int.Parse(Console.ReadLine());
+
             long thiefsId = long.MinValue;
-
-
+            
             for (int i = 0; i < countOfIds; i++)
             {
                 long currentId = long.Parse(Console.ReadLine());
@@ -40,11 +39,7 @@ namespace _07.Sentence_the_Thief
                     thiefsId = currentId;
                 }
             }
-
-
-
-            //Console.WriteLine(thiefsId);
-
+            
             double yearsOfSentence = 0.0;
 
             if (thiefsId >= sbyte.MinValue && thiefsId <= sbyte.MaxValue)
@@ -56,14 +51,11 @@ namespace _07.Sentence_the_Thief
                 else if(thiefsId < sbyte.MinValue)
                     yearsOfSentence = (thiefsId / (double)sbyte.MinValue);
             }
-
-
+            
             Console.WriteLine("Prisoner with id {0} is sentenced to {1} {2}"
                 , thiefsId
                 , Math.Ceiling(yearsOfSentence)
                 , Math.Ceiling(yearsOfSentence) > 1 ? "years" : "year");
-            // Na poslednoto kazvame che ako godinite sa goveche ot 1 da pishe "years" inache "year"
-
         }
     }
 }
