@@ -11,7 +11,6 @@ namespace _03.NetherRealms
     {
         static void Main(string[] args)
         {
-           
             string[] deamons = Console.ReadLine()
                 .Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(a => a.Trim())
@@ -24,9 +23,6 @@ namespace _03.NetherRealms
 
                 Console.WriteLine($"{deamon} - {health} health, {damage:f2} damage");
             }
-            
-
-
         }
 
         private static decimal GetDamage(string deamon)
@@ -44,7 +40,7 @@ namespace _03.NetherRealms
                 result += decimal.Parse(item);
 
             }
-           // result = 2;
+
             foreach (var item in deamon)
             {
                 if (item == '*')
@@ -65,8 +61,7 @@ namespace _03.NetherRealms
                 .Select(a => a.Value)
                 .Select(a => Convert.ToChar(a))
                 .ToArray();
-
-
+            
             result = matches.Select(a => Convert.ToInt64(a)).Sum();
 
             return result;

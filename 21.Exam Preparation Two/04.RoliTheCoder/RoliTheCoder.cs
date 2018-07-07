@@ -16,7 +16,9 @@ namespace _04.RoliTheCoder
                 .ToArray();
 
             Dictionary<int, string> idsAndEvents = new Dictionary<int, string>();
+
             Dictionary<string, List<string>> eventsAndParticipants = new Dictionary<string, List<string>>();
+
             Dictionary<string, int> eventsAndCountOfPartecipants = new Dictionary<string, int>();
 
             while (input[0] != "Time")
@@ -31,8 +33,7 @@ namespace _04.RoliTheCoder
                         if(input[i].First() == '@')
                             partecipants.Add(input[i]);
                     }
-                        
-
+                    
                     if (!idsAndEvents.ContainsKey(id))
                     {
                        idsAndEvents[id] = @event;
@@ -40,11 +41,9 @@ namespace _04.RoliTheCoder
                     }
                     else
                     {
-                        // the id exists
-
+                     
                         if (idsAndEvents.ContainsValue(@event))
-                        {// if the event is the same
-
+                        {
                             List<string> otherPartecipants = eventsAndParticipants[@event];
                             foreach (var partecipant in partecipants)
                             {
@@ -54,10 +53,7 @@ namespace _04.RoliTheCoder
 
                             eventsAndParticipants[@event] = otherPartecipants;
                         }
-                       
-
                     }
-
                 }
 
                 input = Console.ReadLine()
@@ -65,11 +61,8 @@ namespace _04.RoliTheCoder
                 .Select(a => a.Trim())
                 .ToArray();
             }
-
-
+            
             PrintResult(idsAndEvents, eventsAndParticipants, eventsAndCountOfPartecipants);
-
-
         }
 
         private static void PrintResult(Dictionary<int, string> idsAndEvents, Dictionary<string, List<string>> eventsAndParticipants, Dictionary<string, int> eventsAndCountOfPartecipants)
@@ -91,7 +84,6 @@ namespace _04.RoliTheCoder
                     Console.WriteLine(partecipant);
                 }
             }
-
         }
     }
 }

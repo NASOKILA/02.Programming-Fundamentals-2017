@@ -16,11 +16,9 @@ namespace _02.Ladybugs
                 .Where(a => a >= 0 && a < sizeOfTheField)
                 .ToList();
 
-
             int[] initialField = new int[sizeOfTheField];
 
             SetInitialField(initialField, indexesOfAllLadybugs);
-
 
             string command = Console.ReadLine();
 
@@ -43,26 +41,24 @@ namespace _02.Ladybugs
             }
 
             Console.WriteLine(string.Join(" ", initialField));
-
         }
 
         private static void MoveLadyBugToRight(int ladyBugIndex, int flyLength, int[] initialField)
         {
-
             if (flyLength < 0)
             {
                 MoveLadyBugToLeft(ladyBugIndex, Math.Abs(flyLength), initialField);
                 return;
             }
-
-
+            
             if ((ladyBugIndex >= 0 && ladyBugIndex <= initialField.Length-1) && initialField[ladyBugIndex] != 0)
-            {  // if there is a ladybug at that index and if it's a valid index
+            {  
 
-                initialField[ladyBugIndex] = 0; // delete that ladybug
-                while (true) // dokato ne namerim svobodno mqsto za da stupne ladybuga
+                initialField[ladyBugIndex] = 0; 
+
+                while (true) 
                 {
-                    if (ladyBugIndex + flyLength >= initialField.Length) // ako indexsa izliza breikvame
+                    if (ladyBugIndex + flyLength >= initialField.Length) 
                         break;
                     if (initialField[ladyBugIndex + flyLength] == 0)
                     {
@@ -77,7 +73,7 @@ namespace _02.Ladybugs
         private static void MoveLadyBugToLeft(int ladyBugIndex, int flyLength, int[] initialField)
         {
             if ((ladyBugIndex >= 0 && ladyBugIndex <= initialField.Length-1) && initialField[ladyBugIndex] != 0)
-            {  // if there is a ladybug at that index and if it's a valid index
+            {  
 
                 if (flyLength < 0)
                 {
@@ -85,10 +81,10 @@ namespace _02.Ladybugs
                     return;
                 }
 
-                initialField[ladyBugIndex] = 0; // delete that ladybug
-                while (true) // dokato ne namerim svobodno mqsto za da stupne ladybuga
+                initialField[ladyBugIndex] = 0;
+                while (true) 
                 {
-                    if (ladyBugIndex - flyLength < 0) // ako indexsa izliza breikvame
+                    if (ladyBugIndex - flyLength < 0) 
                         break;
                     if (initialField[ladyBugIndex - flyLength] == 0)
                     {
