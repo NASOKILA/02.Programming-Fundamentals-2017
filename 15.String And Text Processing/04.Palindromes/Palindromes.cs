@@ -24,16 +24,18 @@ namespace _04.Palindromes
                 if (ispalindrome)
                     result.Add(word);
             }
-
-
+            
             result = result.OrderBy(a => a).ToList();
+
             Console.WriteLine(string.Join(", ", result));
         }
 
         public static bool IsPalindrome(string word)
         {
             int min = 0;
+
             int max = word.Length - 1;
+
             while (true)
             {
                 if (min > max)

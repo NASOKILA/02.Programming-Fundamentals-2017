@@ -9,7 +9,9 @@ namespace _03.TextFilter
         static void Main(string[] args)
         {
             List<string> bannedWords = Console.ReadLine().Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+
             string text = Console.ReadLine();
+
             foreach (var word in bannedWords)
             {
                 if (text.Contains(word))

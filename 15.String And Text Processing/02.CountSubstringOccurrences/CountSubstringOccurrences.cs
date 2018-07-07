@@ -11,7 +11,9 @@ namespace _02.CountSubstringOccurrences
         static void Main(string[] args)
         {
             string text = Console.ReadLine().ToLower();
+
             string wordToSearch = Console.ReadLine().ToLower();
+
             int occurencies = 0;
 
             var index = text.IndexOf(wordToSearch);
@@ -21,6 +23,7 @@ namespace _02.CountSubstringOccurrences
                 occurencies++;
                 index = text.IndexOf(wordToSearch, index + 1);
             }
+
             Console.WriteLine(occurencies);
         }
     }
