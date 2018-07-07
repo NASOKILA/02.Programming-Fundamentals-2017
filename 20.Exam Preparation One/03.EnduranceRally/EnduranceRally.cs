@@ -10,7 +10,6 @@ namespace _03.EnduranceRally
     {
         static void Main(string[] args)
         {
-
             string[] driversNames = Console.ReadLine()
                 .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .ToArray();
@@ -19,8 +18,7 @@ namespace _03.EnduranceRally
                 .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(double.Parse)
                 .ToList();
-
-
+            
             List<long> checkPointIndexes = Console.ReadLine()
                 .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(long.Parse)
@@ -33,7 +31,6 @@ namespace _03.EnduranceRally
 
                 for (int i = 0; i < trackZones.Count; i++)
                 {
-
                     double currentZoneFuel = trackZones[i];
 
                     if (checkPointIndexes.Contains(i))
@@ -51,10 +48,7 @@ namespace _03.EnduranceRally
 
                 if (!reachedZero)
                     Console.WriteLine($"{driver} - fuel left {fuel:f2}");
-
-
             }
-
         }
     }
 }

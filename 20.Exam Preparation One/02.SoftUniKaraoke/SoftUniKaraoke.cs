@@ -24,10 +24,8 @@ namespace _02.SoftUniKaraoke
                 .ToArray();
 
             Dictionary<string, List<string>> namesAndAwardLists = new Dictionary<string, List<string>>();
-            Dictionary<string, int> namesAndAwardCounts = new Dictionary<string, int>();
-           
 
-            
+            Dictionary<string, int> namesAndAwardCounts = new Dictionary<string, int>();
 
             while (command[0] != "dawn")
             {
@@ -42,10 +40,7 @@ namespace _02.SoftUniKaraoke
                     if (command.Length > 2)
                     {
                         string award = command[2];
-
-
-
-
+                        
                         if (listOfPartecipants.Contains(participant) && songs.Contains(song))
                         {
                             if (!namesAndAwardLists.ContainsKey(participant))
@@ -66,11 +61,7 @@ namespace _02.SoftUniKaraoke
 
                             namesAndAwardLists[participant] = awardList;
                             namesAndAwardCounts[participant] = awardCount;
-
                         }
-
-
-
                     }
                 }
 
@@ -79,8 +70,7 @@ namespace _02.SoftUniKaraoke
                 .Select(a => a.Trim())
                 .ToArray();
             }
-
-
+            
             PrintResult(namesAndAwardLists, namesAndAwardCounts);
         }
 
@@ -92,6 +82,7 @@ namespace _02.SoftUniKaraoke
             {
                 Console.WriteLine("No awards");
             }
+
             foreach (var kvp in namesAndAwardCounts)
             {
                 string name = kvp.Key;
@@ -100,7 +91,6 @@ namespace _02.SoftUniKaraoke
    
                 foreach (var award in namesAndAwardLists[name].OrderBy(a => a))
                     Console.WriteLine($"--{award}");
-
             }
         }
     }

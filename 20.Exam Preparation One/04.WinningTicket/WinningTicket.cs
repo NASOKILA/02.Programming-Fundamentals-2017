@@ -19,8 +19,6 @@ namespace _04.WinningTicket
 
             foreach (var ticket in tickets)
             {
-
-
                 if (ticket.Length != 20)
                 {
                     Console.WriteLine("invalid ticket");
@@ -32,19 +30,14 @@ namespace _04.WinningTicket
                 
                     string leftLongestSequence = FindMaxEqualSeq(leftSide);
                     string rightLongestSequence = FindMaxEqualSeq(rightSide);
-
-                   
-
-
-
+                    
                     char matchSymbol = leftLongestSequence.First();
                     if (!rightLongestSequence.Contains(matchSymbol))
                     {
                         Console.WriteLine($"ticket \"{ticket}\" - no match");
                         continue;
                     }
-
-
+                    
                     if ((leftLongestSequence.Length >= 6 && leftLongestSequence.Length <= 9)
                         && (rightLongestSequence.Length >= 6 && rightLongestSequence.Length <= 9)
                         && (leftLongestSequence[0] == rightLongestSequence[0]))
@@ -56,16 +49,12 @@ namespace _04.WinningTicket
 
                     else if (leftLongestSequence.Length == 10 && rightLongestSequence.Length == 10)
                         Console.WriteLine($"ticket \"{ticket}\" - 10{matchSymbol} Jackpot!");
-                }
-                   
+                }  
             }
-
-
         }
 
         private static string FindMaxEqualSeq(string s)
         {
-
             string bestStr = "" + s[0]; 
             var max = 1;
             for (int i = 0; i < s.Length-1; i++)
@@ -82,6 +71,7 @@ namespace _04.WinningTicket
                     }
                 }
             }
+
             return bestStr;
         }
     }
