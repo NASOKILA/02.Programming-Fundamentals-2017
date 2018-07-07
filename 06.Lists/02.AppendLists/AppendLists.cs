@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace _02.AppendLists
 {
     class AppendLists
@@ -16,8 +15,7 @@ namespace _02.AppendLists
 
             List<string> result = new List<string>();
             lists.Reverse();
-
-
+            
             foreach (var item in lists)
             {
                 List<string> newList = item
@@ -25,11 +23,9 @@ namespace _02.AppendLists
                     .ToList();
 
                 result.AddRange(newList);
-
             }
 
             Console.WriteLine(string.Join(" ", result));
-
         }
     }
 }

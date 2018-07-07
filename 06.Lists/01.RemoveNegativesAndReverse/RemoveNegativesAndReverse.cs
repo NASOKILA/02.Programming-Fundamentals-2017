@@ -18,15 +18,12 @@ namespace _01.RemoveNegativesAndReverse
 
             for (int i = list.Count - 1; i >= 0; i--)
             {
-
                 if (list[i] >= 0)
                 {
                     reversedList.Add(list[i]);
                 }
-
             }
-
-
+            
             if (reversedList.Count < 1)
                 Console.WriteLine("empty");
             else

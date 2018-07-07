@@ -9,8 +9,8 @@ namespace _04.SplitbyWordCasing
         static void Main(string[] args)
         {
             List<string> text = Console.ReadLine()
-    .Split(new char[] { ' ', ':', ',', '.', ';', '!', '(', ')', '"', '/', '\\', '[', ']', '\'' }, StringSplitOptions.RemoveEmptyEntries)
-    .ToList();
+                .Split(new char[] { ' ', ':', ',', '.', ';', '!', '(', ')', '"', '/', '\\', '[', ']', '\'' }, StringSplitOptions.RemoveEmptyEntries)
+                .ToList();
 
             List<string> LowerCaseWords = new List<string>();
             List<string> UpperCaseWords = new List<string>();
@@ -27,9 +27,10 @@ namespace _04.SplitbyWordCasing
             }
 
             Console.WriteLine($"Lower-case: " + string.Join(", ", LowerCaseWords));
-            Console.WriteLine($"Mixed-case: " + string.Join(", ", MixedCaseWords));
-            Console.WriteLine($"Upper-case: " + string.Join(", ", UpperCaseWords));
 
+            Console.WriteLine($"Mixed-case: " + string.Join(", ", MixedCaseWords));
+
+            Console.WriteLine($"Upper-case: " + string.Join(", ", UpperCaseWords));
         }
     }
 }

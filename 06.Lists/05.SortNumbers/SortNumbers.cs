@@ -11,8 +11,7 @@ namespace _05.SortNumbers
             List<decimal> text = Console.ReadLine()
                .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                .Select(decimal.Parse).ToList();
-
-
+            
             text.Sort();
 
             Console.WriteLine(string.Join(" <= ", text));

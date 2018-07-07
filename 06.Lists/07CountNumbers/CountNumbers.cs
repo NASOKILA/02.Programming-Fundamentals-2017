@@ -13,15 +13,13 @@ namespace _07CountNumbers
                 .Select(int.Parse).ToList();
 
             numbers.Sort();
+
             Dictionary<int, int> counts = new Dictionary<int, int>();
-
-
+            
             foreach (var num in numbers)
             {
-
                 int occurrency = numbers.Where(n => n == num).Count();
                 counts[num] = occurrency;
-
             }
 
             foreach (var keyValuePair in counts)
