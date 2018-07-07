@@ -15,6 +15,7 @@ namespace _01.SortTimes
                 .ToList();
 
            var result =  dates.OrderBy(a => a).ToList();
+
             List<string> res = new List<string>();
 
             foreach (var item in result)
@@ -23,8 +24,8 @@ namespace _01.SortTimes
                 time = time.Substring(0, time.Length - 3);
                 res.Add(time);
             }
+
             Console.WriteLine(string.Join(", " ,res));
-            
         }
     }
 }

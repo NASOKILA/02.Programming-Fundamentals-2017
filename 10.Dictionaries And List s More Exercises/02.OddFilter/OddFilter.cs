@@ -14,6 +14,7 @@ namespace _02.OddFilter
                 .ToList();
 
             var remainingNums = nums.Where(n => n%2 == 0).ToList();
+
             double average = remainingNums.Sum() / remainingNums.Count;
 
             for (int i = 0; i < remainingNums.Count; i++)
@@ -25,7 +26,6 @@ namespace _02.OddFilter
             }
 
             Console.WriteLine(string.Join(" ", remainingNums));
-
         }
     }
 }

@@ -12,12 +12,12 @@ namespace _04.SupermarketDatabase
         {
 
             Dictionary<string, double> namePrice = new Dictionary<string, double>();
+
             Dictionary<string, int> nameQuantity = new Dictionary<string, int>();
 
             SetStocks(namePrice, nameQuantity);
 
             PrintResult(namePrice, nameQuantity);
-
         }
 
 
@@ -37,7 +37,9 @@ namespace _04.SupermarketDatabase
                 counter++;
                 grandTotal += (decimal)result;
             }
+
             Console.WriteLine("------------------------------");
+
             Console.WriteLine($"Grand Total: ${grandTotal:F2}");
         }
 
@@ -52,26 +54,18 @@ namespace _04.SupermarketDatabase
                 string name = command[0];
                 double price = double.Parse(command[1]);
                 int quantity = int.Parse(command[2]);
-
-
-                // we replace the price if it is the different
+                
                 namePrice[name] = price;
 
-                // if the quantity is different on the same product we add it to the first one
                 if (nameQuantity.ContainsKey(name))
                     nameQuantity[name] += quantity;
                 else
                     nameQuantity[name] = quantity;
-
-
-
+                
                 command = Console.ReadLine()
                 .Split(' ')
                 .ToArray();
             }
         }
-
-
-
     }
 }

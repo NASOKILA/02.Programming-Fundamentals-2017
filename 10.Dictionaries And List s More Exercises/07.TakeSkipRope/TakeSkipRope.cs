@@ -13,19 +13,19 @@ namespace _07.TakeSkipRope
             string encriptedMessage = Console.ReadLine();
 
             List<int> numbersOfMesage = new List<int>();
+
             List<string> lettersOfMessage = new List<string>();
 
-            // we have to get all numbers and store them 
             foreach (var ch in encriptedMessage)
             {
-                if (ch > 47 && ch < 58) // if its a number
+                if (ch > 47 && ch < 58) 
                     numbersOfMesage.Add(int.Parse(ch.ToString()));
-                else // if it is not a number
+                else 
                     lettersOfMessage.Add(ch.ToString());
             }
-
-
+            
             List<int> takeList = new List<int>();
+
             List<int> skipList = new List<int>();
 
             int counter = 0;
@@ -37,14 +37,18 @@ namespace _07.TakeSkipRope
                     skipList.Add(item);
                 counter++;
             }
-           // string lettersOfMessageToString = lettersOfMessage.ToString();
+
             List<string> resultList = new List<string>();
+
             string resultStr = string.Empty;
 
             
             int total = 0;
+
             int takenChars = 0;
+
             int skippedChars = 0;
+
             for (int i = 0; i < takeList.Count; i++) 
             {
                 total += (skippedChars + takenChars);
@@ -56,7 +60,6 @@ namespace _07.TakeSkipRope
             }
 
             Console.WriteLine(resultStr);
-
         }
     }
 }

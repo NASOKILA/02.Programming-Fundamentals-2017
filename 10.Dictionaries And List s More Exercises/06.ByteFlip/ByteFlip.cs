@@ -20,13 +20,11 @@ namespace _06.ByteFlip
             
             foreach (var elem in list)
             {
-                // we reverse everi element one by one
                 string reversedElem = new string(elem.ToCharArray().Reverse().ToArray());
-                // we convert from hex to char 
                 char ch = (char)Int16.Parse(reversedElem, NumberStyles.AllowHexSpecifier);
-                // print the result
                 Console.Write(ch);
             }
+
             Console.WriteLine();
         }
     }

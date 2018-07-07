@@ -19,31 +19,27 @@ namespace _03.Immune_System
             while (virusName != "end")
             {
 
-                //We have to get virus strength
                 double virusStrength = 0.00;
+
                 foreach (var ch in virusName)
                     virusStrength += ch;
-
-
+                
                 virusStrength = Math.Floor(virusStrength / 3.0);
 
-
-                //We have to get virus time
                 double timeInSeconds = 0.0;
 
                 if (pastViruses.Contains(virusName))
-                    timeInSeconds = Math.Floor((virusStrength * virusName.Length) / 3); // ako veche sme go imali tozi virus vremeto se deli na 3
+                    timeInSeconds = Math.Floor((virusStrength * virusName.Length) / 3); 
                 else
-                { // ako ne go sudurja go dobavqme i opravqme vremeto da e po dulgo
+                { 
                     timeInSeconds = virusStrength * virusName.Length;
                     pastViruses.Add(virusName);
                 }
 
                 Console.WriteLine($"Virus {virusName}: {virusStrength} => {timeInSeconds} seconds");
+
                 TimeSpan timeinMinutes = TimeSpan.FromSeconds(timeInSeconds);
-                // MOJE DA SE NAPRAVI I SUS (timeInSeconds / 60) za minutite i (timeInSeconds % 60) za sekundite
-
-
+                
                 if (initialHealth > timeInSeconds)
                 {
                     Console.WriteLine($"{virusName} defeated in {Math.Floor(timeinMinutes.TotalMinutes)}m {timeinMinutes.Seconds}s.");
