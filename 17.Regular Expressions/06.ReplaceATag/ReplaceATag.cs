@@ -14,10 +14,13 @@ namespace _06.ReplaceATag
             string input = Console.ReadLine();
 
             string pattern = @"<a.*?href.*?=(.*)>(.*?)</a>";
+
             string replacement = @"[URL href=$1]$2[/URL]";
 
             Regex regex = new Regex(pattern);
+
             List<string> res = new List<string>();
+
             while (input != "end")
             {
                 var result = regex.Replace(input, replacement);

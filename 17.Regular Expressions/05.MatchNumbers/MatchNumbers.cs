@@ -12,8 +12,11 @@ namespace _05.MatchNumbers
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
+
             string pattern = @"(^|(?<=\s))-?\d+(\.\d+)?($|(?=\s))";
+
             Regex regex = new Regex(pattern);
+
             var matches = regex.Matches(input)
                 .Cast<Match>()
                 .Select(a => a.Value)

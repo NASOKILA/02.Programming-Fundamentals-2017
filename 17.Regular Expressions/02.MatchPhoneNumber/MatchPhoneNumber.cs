@@ -12,10 +12,15 @@ namespace _02.MatchPhoneNumber
         static void Main(string[] args)
         {
             string phones = Console.ReadLine();
+
             string pattern = @"[+359]+\b([ -]{1})(2)\1([\d]{3})\1([\d]{4})\b";
+
             Regex regex = new Regex(pattern);
+
             List<string> res = new List<string>();
+
             MatchCollection matches = regex.Matches(phones);
+
             foreach (var item in matches)
             {
                 if (item.ToString().First() == '+')
@@ -23,7 +28,6 @@ namespace _02.MatchPhoneNumber
             }
 
             Console.WriteLine(string.Join(", ", res));
-
         }
     }
 }

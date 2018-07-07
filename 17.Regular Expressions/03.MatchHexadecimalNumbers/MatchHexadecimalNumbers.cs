@@ -22,8 +22,7 @@ namespace _03.MatchHexadecimalNumbers
                 .Select(a => a.Value)
                 .ToArray();
 
-            Console.WriteLine(string.Join(" ", matches));
-            
+            Console.WriteLine(string.Join(" ", matches));            
         }
     }
 }
