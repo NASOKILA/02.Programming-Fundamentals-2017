@@ -19,7 +19,6 @@ namespace _06.FoldAndSum
             nums.Reverse();
             newList.AddRange(nums.Take(nums.Count / 4));
             nums = nums.Skip(nums.Count / 4).Take(nums.Count / 2).Reverse().ToList();
-            //.Skip(nums.Count / 4).Reverse().ToList();
 
             List<int> sum = newList.Select((x, index) => x + nums[index]).ToList();
 

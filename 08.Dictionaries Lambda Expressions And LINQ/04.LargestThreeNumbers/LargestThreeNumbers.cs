@@ -14,7 +14,6 @@ namespace _04.LargestThreeNumbers
                 .ToList();
 
             Console.WriteLine(string.Join(" ",nums.OrderByDescending(n => n).Take(3).ToList()));
-
         }
     }
 }

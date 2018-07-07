@@ -22,8 +22,7 @@ namespace _02.OddOccurrences
                 else
                     counts[word]++;
             }
-
-
+            
             Console.WriteLine(string.Join(", ", counts.Keys.Where(k => counts[k] % 2 == 1)));
         }
     }
